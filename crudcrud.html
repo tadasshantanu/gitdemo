@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+ h1 {
+    animation-name: example;
+    animation-duration: 3s;
+    color: green;
+    animation-iteration-count: infinite;
+    
+    
+  }
+
+  @keyframes example {
+    from {color: red;}
+    to {color: yellow;}
+  }
+</style>
+<body>
+    
+    <h1 style="text-align:center">Expense Tracker</h1>
+    <form>
+        <label for="amount">Choose a amount:</label>
+        <input type="number" id="amount" name="amount">
+        <label for="description">Choose description:</label>
+        <input type="text" id="description" name="description">
+        <label for="category">Choose category:</label>
+        
+        <select id="category" name="category">
+            <option value="fuel">Fuel</option>
+            <option value="food" selected>Food</option>
+            <option value="electricity">Electricity</option>
+            <option value="movie">Movie</option>
+          </select>
+        <input type="button" id="submitButton" value="Add Expense">
+    </form>
+    
+    <ul class="mainList" id="mainList">
+        
+    </ul>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="asyncExpense.js"></script>
+
+
+    
+</body>
+</html>
